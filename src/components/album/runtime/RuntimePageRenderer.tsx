@@ -73,6 +73,7 @@ export const RuntimePageRenderer: React.FC<RuntimePageRendererProps> = ({
     <div
       className="relative w-full h-full overflow-hidden select-none paper-sheet"
       style={{
+        containerType: 'inline-size',
         backgroundColor: bgColor,
       }}
       data-page-index={page.pageIndex}

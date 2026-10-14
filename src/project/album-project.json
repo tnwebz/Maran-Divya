@@ -46,27 +46,11 @@
     "photoSlots": [],
     "textElements": [
       {
-        "id": "cover-title-album-1791957081974-on4k6xu",
-        "text": "Maran & Divya",
-        "x": 14.47,
-        "y": 16.5,
-        "width": 70,
-        "height": 12,
-        "fontFamily": "serif",
-        "fontSize": 24,
-        "fontWeight": 600,
-        "color": "#d4af37",
-        "align": "center",
-        "letterSpacing": "0.25em",
-        "role": "coverTitle",
-        "rotation": 0
-      },
-      {
         "id": "txt-1791967874058",
         "text": "M & D",
-        "x": 30.54,
-        "y": 8.17,
-        "width": 40,
+        "x": 10,
+        "y": 8,
+        "width": 80,
         "height": 10,
         "rotation": 0,
         "fontFamily": "Cinzel",
@@ -82,11 +66,27 @@
         }
       },
       {
+        "id": "cover-title-album-1791957081974-on4k6xu",
+        "text": "Maran & Divya",
+        "x": 10,
+        "y": 18,
+        "width": 80,
+        "height": 10,
+        "fontFamily": "serif",
+        "fontSize": 24,
+        "fontWeight": 600,
+        "color": "#d4af37",
+        "align": "center",
+        "letterSpacing": "0.25em",
+        "role": "coverTitle",
+        "rotation": 0
+      },
+      {
         "id": "txt-1791967881698",
         "text": "WEDDING ALBUM",
-        "x": 30.8,
-        "y": 38.33,
-        "width": 40,
+        "x": 10,
+        "y": 38,
+        "width": 80,
         "height": 10,
         "rotation": 0,
         "fontFamily": "Playfair Display",
@@ -101,49 +101,11 @@
         }
       },
       {
-        "id": "txt-1791968048967",
-        "text": "Celebrating Love • Family • Forever",
-        "x": 31.46,
-        "y": 84.83,
-        "width": 40,
-        "height": 10,
-        "rotation": 0,
-        "fontFamily": "Inter",
-        "fontSize": 13,
-        "fontWeight": 400,
-        "color": "#f8d525",
-        "align": "center",
-        "lineHeight": 1.4,
-        "letterSpacing": 3.5,
-        "metadata": {
-          "manualOverride": true
-        }
-      },
-      {
-        "id": "txt-1791968256984",
-        "text": "Subheading Text",
-        "x": 30,
-        "y": 45,
-        "width": 40,
-        "height": 10,
-        "rotation": 0,
-        "fontFamily": "Playfair Display",
-        "fontSize": 18,
-        "fontWeight": 600,
-        "color": "#1a1816",
-        "align": "center",
-        "lineHeight": 1.4,
-        "letterSpacing": 0.5,
-        "metadata": {
-          "manualOverride": false
-        }
-      },
-      {
         "id": "txt-1791968258185",
         "text": "“A Royal Timeless Promise”",
-        "x": 30.13,
-        "y": 58.17,
-        "width": 40,
+        "x": 10,
+        "y": 58,
+        "width": 80,
         "height": 10,
         "rotation": 0,
         "fontFamily": "Playfair Display",
@@ -153,6 +115,25 @@
         "align": "center",
         "lineHeight": 1.4,
         "letterSpacing": 0.5,
+        "metadata": {
+          "manualOverride": true
+        }
+      },
+      {
+        "id": "txt-1791968048967",
+        "text": "Celebrating Love • Family • Forever",
+        "x": 10,
+        "y": 84,
+        "width": 80,
+        "height": 10,
+        "rotation": 0,
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "color": "#f8d525",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 3.5,
         "metadata": {
           "manualOverride": true
         }

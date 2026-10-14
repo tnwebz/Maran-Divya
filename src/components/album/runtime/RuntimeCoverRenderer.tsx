@@ -49,6 +49,7 @@ export const RuntimeCoverRenderer: React.FC<RuntimeCoverRendererProps> = ({
     <div
       className="relative w-full h-full overflow-hidden select-none"
       style={{
+        containerType: 'inline-size',
         backgroundColor: bgColor,
         background:
           bgType === 'solid'

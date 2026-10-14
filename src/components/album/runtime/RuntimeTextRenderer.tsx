@@ -34,23 +34,36 @@ function resolveFontFamily(family?: string): string {
 }
 
 export const RuntimeTextRenderer: React.FC<RuntimeTextRendererProps> = ({ element }) => {
+  // Hide untransformed default placeholder text
+  if (
+    element.text === 'Subheading Text' &&
+    element.metadata?.manualOverride === false
+  ) {
+    return null;
+  }
+
   const isGoldFoil =
     element.color?.toLowerCase() === '#d4af37' ||
     element.color?.toLowerCase() === '#e6ca65' ||
-    element.role === 'monogram';
+    element.color?.toLowerCase() === '#f8d525' ||
+    element.color?.toLowerCase() === '#e1cc41' ||
+    element.color?.toLowerCase() === '#e6c628' ||
+    element.role === 'monogram' ||
+    element.role === 'coverTitle';
 
   const fontFamily = resolveFontFamily(element.fontFamily);
-  const letterSpacing =
-    typeof element.letterSpacing === 'number'
-      ? `${element.letterSpacing}px`
-      : element.letterSpacing || '0.05em';
 
-  // Scale font size proportionally for responsive album container
+  // Studio reference canvas width is 750px.
+  // Using container query width (cqw), text scales 1:1 with the album leaf
+  // so text never collapses, wraps awkwardly, or overflows on mobile devices.
   const baseFontSize = element.fontSize || 18;
+  const scaledFontSize = `clamp(8.5px, ${(baseFontSize / 7.5).toFixed(3)}cqw, ${baseFontSize}px)`;
+
+  const hasMultipleLines = element.text.includes('\n');
 
   return (
     <div
-      className="absolute overflow-visible select-none flex items-center"
+      className="absolute overflow-visible select-none flex items-center justify-center pointer-events-none"
       style={{
         left: `${element.x}%`,
         top: `${element.y}%`,
@@ -70,18 +83,22 @@ export const RuntimeTextRenderer: React.FC<RuntimeTextRendererProps> = ({ elemen
       data-text-role={element.role}
     >
       <div
-        className={`w-full ${isGoldFoil ? 'gold-foil-text' : ''}`}
+        className={`${isGoldFoil ? 'gold-foil-text' : ''}`}
         style={{
           fontFamily,
-          fontSize: `${baseFontSize}px`,
+          fontSize: scaledFontSize,
           fontWeight: element.fontWeight || 500,
           color: element.color || '#1a1816',
           textAlign: element.align || 'center',
           lineHeight: element.lineHeight || 1.3,
-          letterSpacing,
+          letterSpacing:
+            typeof element.letterSpacing === 'number'
+              ? `clamp(0.2px, ${(element.letterSpacing / 7.5).toFixed(2)}cqw, ${element.letterSpacing}px)`
+              : element.letterSpacing || '0.05em',
           textShadow: isGoldFoil ? '0 1px 2px rgba(0,0,0,0.35)' : undefined,
-          whiteSpace: 'pre-wrap',
-          wordBreak: 'break-word',
+          whiteSpace: hasMultipleLines ? 'pre-wrap' : 'nowrap',
+          wordBreak: 'normal',
+          flexShrink: 0,
         }}
       >
         {element.text}
