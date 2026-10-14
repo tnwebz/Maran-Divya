@@ -27,43 +27,55 @@ interface AlbumBookProps {
   } | null>;
 }
 
-/** Compute page size so the open spread fills ~80–88vw × 75–85vh on desktop. */
+/**
+ * Compute page dimensions proportionally to ensure the book fits cleanly within the screen
+ * on all devices (mobile landscape, tablets, standard scaled laptops, 1080p, 4K).
+ * Leaves ample room for top header, bottom navigation bar, and aesthetic luxury margins.
+ */
 function computePageSize() {
+  if (typeof window === 'undefined') {
+    return { pageWidth: 500, pageHeight: 600, coverBorder: 8 };
+  }
+
   const sw = window.innerWidth;
   const sh = window.innerHeight;
 
-  // Slim hardcover border peeking around ivory pages
-  const coverBorder = sw >= 1400 ? 11 : sw >= 900 ? 9 : 6;
+  const isMobile = sw < 640 || sh < 480;
+  const isTablet = sw < 1024 && !isMobile;
 
-  // Open-book footprint (reference ~1550–1680 × 850–900 on 1920×1080)
-  const targetBookW = Math.min(sw * 0.86, 1680);
-  const targetBookH = Math.min(sh * 0.82, 900);
+  // Slim hardcover border peeking around pages
+  const coverBorder = isMobile ? 4 : isTablet ? 7 : 10;
 
-  let pageWidth = Math.floor((targetBookW - coverBorder * 2) / 2);
-  let pageHeight = Math.floor(targetBookH - coverBorder * 2);
+  // Reserved vertical space for top header (56px) + bottom navigation (60px) + luxury breathing room
+  const verticalChrome = isMobile ? 64 : isTablet ? 110 : 136;
+  const horizontalPaddingFactor = isMobile ? 0.98 : isTablet ? 0.94 : 0.90;
 
-  // Keep pages near-square / lightly portrait so the open spread reads landscape
-  // like the Stitch reference (each leaf ~800×860 → spread ~1600×860)
-  const maxRatio = 1.02; // width/height
-  const minRatio = 0.78;
-  const ratio = pageWidth / pageHeight;
-  if (ratio > maxRatio) {
-    pageWidth = Math.floor(pageHeight * maxRatio);
-  } else if (ratio < minRatio) {
-    pageHeight = Math.floor(pageWidth / minRatio);
+  // Maximum dimensions available for the entire outer book shell
+  const maxShellW = Math.min(Math.floor(sw * horizontalPaddingFactor), 1600);
+  const maxShellH = Math.max(200, Math.floor(sh - verticalChrome));
+
+  // Space available for the 2 interior page leaves combined
+  const maxAvailableLeavesW = maxShellW - coverBorder * 2;
+  const maxAvailableLeafH = maxShellH - coverBorder * 2;
+
+  const maxLeafW = Math.floor(maxAvailableLeavesW / 2);
+  const maxLeafH = Math.floor(maxAvailableLeafH);
+
+  // Target aspect ratio of each page leaf (width / height)
+  // 0.82 ratio gives a spread ratio of ~1.64:1 (close to 16:10 / 16:9, matching real photo albums)
+  const targetRatio = 0.82;
+
+  let pageWidth = maxLeafW;
+  let pageHeight = Math.floor(pageWidth / targetRatio);
+
+  if (pageHeight > maxLeafH) {
+    pageHeight = maxLeafH;
+    pageWidth = Math.floor(pageHeight * targetRatio);
   }
 
-  // Desktop floor so we never collapse into a postcard
-  if (sw >= 1400) {
-    pageWidth = Math.max(720, Math.min(pageWidth, 860));
-    pageHeight = Math.max(780, Math.min(pageHeight, 920));
-  } else if (sw >= 900) {
-    pageWidth = Math.max(420, Math.min(pageWidth, 720));
-    pageHeight = Math.max(480, Math.min(pageHeight, 820));
-  } else {
-    pageWidth = Math.max(280, Math.min(pageWidth, 420));
-    pageHeight = Math.max(340, Math.min(pageHeight, 560));
-  }
+  // Safety floor to guarantee valid rendering
+  pageWidth = Math.max(120, pageWidth);
+  pageHeight = Math.max(150, pageHeight);
 
   return { pageWidth, pageHeight, coverBorder };
 }
@@ -85,7 +97,10 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
   const [currentPage, setCurrentPage] = useState(0);
   const [stackLeftWidth, setStackLeftWidth] = useState(2);
   const [stackRightWidth, setStackRightWidth] = useState(16);
-  const [coverBorder, setCoverBorder] = useState(11);
+  const [coverBorder, setCoverBorder] = useState(10);
+  const [remountKey, setRemountKey] = useState(0);
+  const savedPageIndexRef = useRef(0);
+  const dimensionsRef = useRef<{ pageWidth: number; pageHeight: number }>({ pageWidth: 0, pageHeight: 0 });
   const wheelLockRef = useRef(false);
 
   const spreads = config?.spreads;
@@ -103,9 +118,45 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
     onCurrentPageChangeRef.current = onCurrentPageChange;
   }, [onCurrentPageChange]);
 
-  const initBook = useCallback(() => {
+  // Window resize & orientation change listener
+  // Uses debounced measurement and increments remountKey so React cleans up and
+  // mounts a fresh DOM tree, preventing the book from vanishing on resize/fullscreen.
+  useEffect(() => {
+    let resizeTimer: ReturnType<typeof setTimeout>;
+
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const { pageWidth, pageHeight } = computePageSize();
+        // Only remount if dimensions changed by more than 4px
+        if (
+          Math.abs(pageWidth - dimensionsRef.current.pageWidth) > 4 ||
+          Math.abs(pageHeight - dimensionsRef.current.pageHeight) > 4
+        ) {
+          setRemountKey((k) => k + 1);
+        }
+      }, 140);
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
+    };
+  }, []);
+
+  // Main book initialization effect tied to remountKey
+  useEffect(() => {
     if (!containerRef.current) return;
 
+    const { pageWidth, pageHeight, coverBorder: border } = computePageSize();
+    dimensionsRef.current = { pageWidth, pageHeight };
+    setCoverBorder(border);
+
+    // Clean up any existing PageFlip instance before initializing
     if (pageFlipInstance.current) {
       try {
         pageFlipInstance.current.destroy();
@@ -115,8 +166,8 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
       pageFlipInstance.current = null;
     }
 
-    const { pageWidth, pageHeight, coverBorder: border } = computePageSize();
-    setCoverBorder(border);
+    const pageElements = containerRef.current.querySelectorAll('.page-sheet-item');
+    if (pageElements.length === 0) return;
 
     const pageFlip = new PageFlip(containerRef.current, {
       width: pageWidth,
@@ -126,27 +177,25 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
       maxWidth: pageWidth,
       minHeight: pageHeight,
       maxHeight: pageHeight,
-      maxShadowOpacity: 0.7,
+      maxShadowOpacity: 0.6,
       showCover: true, // Front & back covers are hard pages in the same flip sequence
       mobileScrollSupport: false,
       usePortrait: false,
-      startPage: 0,
+      startPage: savedPageIndexRef.current,
       drawShadow: true,
-      flippingTime: 900,
+      flippingTime: 650, // Responsive, buttery-smooth page turns
       useMouseEvents: true,
-      swipeDistance: 20,
+      swipeDistance: 15, // Responsive touch-swipe threshold for mobile
       showPageCorners: true,
       disableFlipByClick: false,
       autoSize: true,
     });
 
-    const pageElements = containerRef.current.querySelectorAll('.page-sheet-item');
-    if (pageElements.length > 0) {
-      pageFlip.loadFromHTML(pageElements as unknown as NodeListOf<HTMLElement>);
-    }
+    pageFlip.loadFromHTML(pageElements as unknown as NodeListOf<HTMLElement>);
 
     pageFlip.on('flip', (e: FlipEvent) => {
       const pageIdx = typeof e.data === 'number' ? e.data : 0;
+      savedPageIndexRef.current = pageIdx;
       setCurrentPage(pageIdx);
       onCurrentPageChangeRef.current?.(pageIdx);
 
@@ -165,34 +214,18 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
 
     pageFlipInstance.current = pageFlip;
     setIsLoaded(true);
-  }, [contentPageCount, lastPageIndex]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      initBook();
-    }, 120);
-
-    let resizeTimer: ReturnType<typeof setTimeout>;
-    const handleResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => initBook(), 180);
-    };
-
-    window.addEventListener('resize', handleResize);
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(resizeTimer);
-      window.removeEventListener('resize', handleResize);
       if (pageFlipInstance.current) {
         try {
           pageFlipInstance.current.destroy();
         } catch {
           // ignore
         }
+        pageFlipInstance.current = null;
       }
     };
-  }, [initBook]);
+  }, [remountKey, contentPageCount, lastPageIndex]);
 
   useEffect(() => {
     if (!bookRef) return;
@@ -277,7 +310,7 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
   return (
     <div
       onWheel={handleWheel}
-      className="relative w-full h-full flex items-center justify-center select-none overflow-hidden"
+      className="relative w-full h-full flex items-center justify-center select-none overflow-hidden touch-none"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.035)_0%,rgba(12,10,9,0.98)_75%)] pointer-events-none" />
 
@@ -332,9 +365,10 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
 
         {/* Page-flip engine — covers + sheets are one continuous flip object */}
         <div
+          key={remountKey}
           ref={containerRef}
           className="relative z-10"
-          style={{ opacity: isLoaded ? 1 : 0 }}
+          style={{ opacity: isLoaded ? 1 : 0, transition: 'opacity 0.25s ease-in' }}
         >
           {/* 0 — Front cover (hard) */}
           <div className="page-sheet-item overflow-hidden select-none" data-density="hard">
