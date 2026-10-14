@@ -1,0 +1,1357 @@
+{
+  "version": 1,
+  "projectId": "album-1791957081974-on4k6xu",
+  "name": "Maran & Divya",
+  "createdAt": "2026-10-14T05:51:21.974Z",
+  "updatedAt": "2026-10-14T08:59:52.170Z",
+  "client": {
+    "coupleNames": "Maran & Divya",
+    "date": "",
+    "location": "",
+    "title": "Maran & Divya Wedding"
+  },
+  "book": {
+    "style": "luxury",
+    "color": "#0f172a",
+    "paper": "ivory",
+    "spine": {
+      "type": "classic",
+      "width": 14,
+      "foilTitle": "Maran & Divya",
+      "foilColor": "#d4af37"
+    },
+    "shadows": {
+      "intensity": 0.8,
+      "ambient": true
+    },
+    "sounds": {
+      "pageFlip": true,
+      "coverOpen": true,
+      "volume": 0.75
+    },
+    "environment": {
+      "lighting": "warm",
+      "background": "#0c0a09"
+    }
+  },
+  "frontCover": {
+    "id": "cover-front-album-1791957081974-on4k6xu",
+    "type": "front",
+    "background": {
+      "type": "solid",
+      "color": "#0f172a",
+      "opacity": 1
+    },
+    "elements": [],
+    "photoSlots": [],
+    "textElements": [
+      {
+        "id": "cover-title-album-1791957081974-on4k6xu",
+        "text": "Maran & Divya",
+        "x": 14.47,
+        "y": 16.5,
+        "width": 70,
+        "height": 12,
+        "fontFamily": "serif",
+        "fontSize": 24,
+        "fontWeight": 600,
+        "color": "#d4af37",
+        "align": "center",
+        "letterSpacing": "0.25em",
+        "role": "coverTitle",
+        "rotation": 0
+      },
+      {
+        "id": "txt-1791967874058",
+        "text": "M & D",
+        "x": 30.54,
+        "y": 8.17,
+        "width": 40,
+        "height": 10,
+        "rotation": 0,
+        "fontFamily": "Cinzel",
+        "fontSize": 42,
+        "fontWeight": 500,
+        "color": "#d4af37",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 4,
+        "role": "monogram",
+        "metadata": {
+          "manualOverride": false
+        }
+      },
+      {
+        "id": "txt-1791967881698",
+        "text": "WEDDING ALBUM",
+        "x": 30.8,
+        "y": 38.33,
+        "width": 40,
+        "height": 10,
+        "rotation": 0,
+        "fontFamily": "Playfair Display",
+        "fontSize": 28,
+        "fontWeight": 700,
+        "color": "#e6c628",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 1.5,
+        "metadata": {
+          "manualOverride": true
+        }
+      },
+      {
+        "id": "txt-1791968048967",
+        "text": "Celebrating Love • Family • Forever",
+        "x": 31.46,
+        "y": 84.83,
+        "width": 40,
+        "height": 10,
+        "rotation": 0,
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "color": "#f8d525",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 3.5,
+        "metadata": {
+          "manualOverride": true
+        }
+      },
+      {
+        "id": "txt-1791968256984",
+        "text": "Subheading Text",
+        "x": 30,
+        "y": 45,
+        "width": 40,
+        "height": 10,
+        "rotation": 0,
+        "fontFamily": "Playfair Display",
+        "fontSize": 18,
+        "fontWeight": 600,
+        "color": "#1a1816",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 0.5,
+        "metadata": {
+          "manualOverride": false
+        }
+      },
+      {
+        "id": "txt-1791968258185",
+        "text": "“A Royal Timeless Promise”",
+        "x": 30.13,
+        "y": 58.17,
+        "width": 40,
+        "height": 10,
+        "rotation": 0,
+        "fontFamily": "Playfair Display",
+        "fontSize": 28,
+        "fontWeight": 700,
+        "color": "#e1cc41",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 0.5,
+        "metadata": {
+          "manualOverride": true
+        }
+      }
+    ],
+    "metadata": {
+      "emboss": "goldFoil"
+    }
+  },
+  "pages": [
+    {
+      "id": "page-album-1791957081974-on4k6xu-1",
+      "pageIndex": 0,
+      "background": {
+        "type": "image",
+        "color": "#f6f5f3",
+        "fit": "contain",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/can (8).png",
+          "overlaySrc": "/album-templates/overlays/can (8)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791961689123-2",
+          "x": 55.09,
+          "y": 23.07,
+          "width": 32.15,
+          "height": 32.18,
+          "rotation": 0.5,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880911_v3aibu"
+        },
+        {
+          "id": "slot-1791961689123-3",
+          "x": 32.78,
+          "y": 45.33,
+          "width": 19.61,
+          "height": 22.48,
+          "rotation": -7,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880911_v3aibu"
+        },
+        {
+          "id": "slot-1791961689123-4",
+          "x": 64.38,
+          "y": 55.26,
+          "width": 24.74,
+          "height": 24.74,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963881011_xwvpqs"
+        },
+        {
+          "id": "slot-1791963777236",
+          "x": 48.17,
+          "y": 51.81,
+          "width": 19.61,
+          "height": 22.48,
+          "rotation": 16,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880938_klsu27"
+        }
+      ],
+      "textElements": [
+        {
+          "id": "txt-1791957302207-1",
+          "text": "Forever Begins Here",
+          "x": 34,
+          "y": 78,
+          "width": 32,
+          "height": 6,
+          "rotation": 0,
+          "fontFamily": "serif",
+          "fontSize": 14,
+          "fontWeight": 500,
+          "color": "#44382c",
+          "align": "center",
+          "lineHeight": 1.3,
+          "letterSpacing": "0.18em"
+        },
+        {
+          "id": "txt-1791968348066",
+          "text": "vfvdfvfdv",
+          "x": -6.43,
+          "y": 20.67,
+          "width": 61.36,
+          "height": 15.34,
+          "rotation": 0,
+          "fontFamily": "Playfair Display",
+          "fontSize": 28,
+          "fontWeight": 700,
+          "color": "#1a1816",
+          "align": "center",
+          "lineHeight": 1.4,
+          "letterSpacing": 0.5,
+          "metadata": {
+            "manualOverride": true
+          }
+        }
+      ],
+      "metadata": {
+        "folioLabel": "Folio 01"
+      },
+      "templateId": "template-canva-08-modern-grid-geometry"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791964006954",
+      "pageIndex": 1,
+      "background": {
+        "type": "image",
+        "color": "#d6cbbe",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (8).png",
+          "overlaySrc": "/album-templates/overlays/frame (8)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791964019615-1",
+          "x": 21.64,
+          "y": 7.66,
+          "width": 57.16,
+          "height": 39.39,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880660_xfobnq"
+        },
+        {
+          "id": "slot-1791964019615-2",
+          "x": 19.56,
+          "y": 53.32,
+          "width": 59.7,
+          "height": 33.31,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880618_zbtl9t"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 03"
+      },
+      "templateId": "frame-template-08-deckled-postcard-pair"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791961641721",
+      "pageIndex": 2,
+      "background": {
+        "type": "image",
+        "color": "#f6f4f0",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (12).png",
+          "overlaySrc": "/album-templates/overlays/frame (12)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791963974146-1",
+          "x": 16.64,
+          "y": 6.21,
+          "width": 35.58,
+          "height": 45.85,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880195_p2qtz5"
+        },
+        {
+          "id": "slot-1791963974146-2",
+          "x": 50.78,
+          "y": 18.65,
+          "width": 33.88,
+          "height": 68.6,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880441_ui00bw"
+        },
+        {
+          "id": "slot-1791963974146-3",
+          "x": 15.38,
+          "y": 49.2,
+          "width": 40.26,
+          "height": 46.78,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880411_hp0yf5"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 02"
+      },
+      "templateId": "frame-template-12-pink-lilies-trio"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791964147551",
+      "pageIndex": 3,
+      "background": {
+        "type": "image",
+        "color": "#e5f3fb",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (4).png",
+          "overlaySrc": "/album-templates/overlays/frame (4)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791964217634",
+          "x": -0.66,
+          "y": -0.07,
+          "width": 100.16,
+          "height": 155.52,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 16,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 2.8,
+          "assetId": "photo_1791963880372_c1eh73"
+        },
+        {
+          "id": "slot-1791964159852-1",
+          "x": 13.5,
+          "y": 22.5,
+          "width": 35.2,
+          "height": 50,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 16,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880251_jwvic7"
+        },
+        {
+          "id": "slot-1791964159852-2",
+          "x": 48,
+          "y": 9,
+          "width": 34.4,
+          "height": 53.4,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 16,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880507_x22a8a"
+        },
+        {
+          "id": "slot-1791967165373",
+          "x": 51,
+          "y": 12,
+          "width": 34.4,
+          "height": 53.4,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 16,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880507_x22a8a"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 04"
+      },
+      "templateId": "frame-template-04-dual-archways"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791964571435",
+      "pageIndex": 4,
+      "background": {
+        "type": "image",
+        "color": "#2a2e24",
+        "fit": "contain",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/can (6).png",
+          "overlaySrc": "/album-templates/overlays/can (6)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791964582197-1",
+          "x": 9.8,
+          "y": 9.5,
+          "width": 25.5,
+          "height": 39.8,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880733_gbmjt6"
+        },
+        {
+          "id": "slot-1791964582197-2",
+          "x": 29.76,
+          "y": 15.11,
+          "width": 27.95,
+          "height": 41.44,
+          "rotation": -8.9,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880801_70cp5a"
+        },
+        {
+          "id": "slot-1791964582197-3",
+          "x": 7.13,
+          "y": 50.03,
+          "width": 27.67,
+          "height": 41.09,
+          "rotation": -6.9,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880864_fefl8a"
+        }
+      ],
+      "textElements": [
+        {
+          "id": "txt-1791964582197-1",
+          "text": "TWO SOULS, ONE TIMELESS PROMISE",
+          "x": 60,
+          "y": 35,
+          "width": 34,
+          "height": 8,
+          "rotation": 0,
+          "fontFamily": "serif",
+          "fontSize": 15,
+          "fontWeight": 600,
+          "color": "#fdfbf7",
+          "align": "left",
+          "lineHeight": 1.3,
+          "letterSpacing": "0.22em"
+        }
+      ],
+      "metadata": {
+        "folioLabel": "Folio 06"
+      },
+      "templateId": "template-canva-06-moody-botanical"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791964333768",
+      "pageIndex": 5,
+      "background": {
+        "type": "image",
+        "color": "#e8ece3",
+        "fit": "contain",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/can (5).png",
+          "overlaySrc": "/album-templates/overlays/can (5)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791964430282",
+          "x": 8.82,
+          "y": 50.63,
+          "width": 34.61,
+          "height": 41.98,
+          "rotation": 3.2,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880579_wjr18z"
+        },
+        {
+          "id": "slot-1791964348008-2",
+          "x": 60.93,
+          "y": 17.46,
+          "width": 27.19,
+          "height": 32.98,
+          "rotation": -7.3,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880660_xfobnq"
+        },
+        {
+          "id": "slot-1791964348008-1",
+          "x": 35.88,
+          "y": 32.49,
+          "width": 40.92,
+          "height": 51.71,
+          "rotation": 0,
+          "shape": "arch",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880555_i3h89y"
+        },
+        {
+          "id": "slot-1791964411650",
+          "x": 63.14,
+          "y": 58.18,
+          "width": 26.67,
+          "height": 32.35,
+          "rotation": -5.5,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880688_9va8bm"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 05"
+      },
+      "templateId": "template-canva-05-minimal-arch"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791965295945",
+      "pageIndex": 6,
+      "background": {
+        "type": "image",
+        "color": "#e5f2fa",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (7).png",
+          "overlaySrc": "/album-templates/overlays/frame (7)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791965317156-1",
+          "x": 0,
+          "y": -0.17,
+          "width": 100,
+          "height": 49.4,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880555_i3h89y"
+        },
+        {
+          "id": "slot-1791965317156-2",
+          "x": -0.93,
+          "y": 69.5,
+          "width": 102.66,
+          "height": 38.5,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880543_7buglf"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 07"
+      },
+      "templateId": "frame-template-07-torn-parchment-dual"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791965361396",
+      "pageIndex": 7,
+      "background": {
+        "type": "image",
+        "color": "#e2dfd9",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (9).png",
+          "overlaySrc": "/album-templates/overlays/frame (9)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791965371656-1",
+          "x": 6.4,
+          "y": 5.9,
+          "width": 38.6,
+          "height": 38.6,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880957_ak5t3g"
+        },
+        {
+          "id": "slot-1791965371656-2",
+          "x": 45,
+          "y": 4.5,
+          "width": 48.5,
+          "height": 41.5,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880938_klsu27"
+        },
+        {
+          "id": "slot-1791965371656-3",
+          "x": 4.4,
+          "y": 62.68,
+          "width": 92.7,
+          "height": 40,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791965707043_1l1tnn"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 08"
+      },
+      "templateId": "frame-template-09-concrete-rose-trio"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791965792051",
+      "pageIndex": 8,
+      "background": {
+        "type": "image",
+        "color": "#ffffff",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (1).png",
+          "overlaySrc": "/album-templates/overlays/frame (1)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791965895255",
+          "x": 2.26,
+          "y": -3.47,
+          "width": 55.02,
+          "height": 115.89,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880938_klsu27"
+        },
+        {
+          "id": "slot-1791965839374-1",
+          "x": 48.2,
+          "y": 0,
+          "width": 38.9,
+          "height": 23.5,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880660_xfobnq"
+        },
+        {
+          "id": "slot-1791965839374-2",
+          "x": 48.2,
+          "y": 34.7,
+          "width": 38.9,
+          "height": 24.8,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880675_bt6kr7"
+        },
+        {
+          "id": "slot-1791965839374-3",
+          "x": 48.2,
+          "y": 70.8,
+          "width": 38.9,
+          "height": 24.8,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963880618_zbtl9t"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 09"
+      },
+      "templateId": "frame-template-01-polaroid-triple"
+    },
+    {
+      "id": "page-album-1791957081974-on4k6xu-1791966231498",
+      "pageIndex": 9,
+      "background": {
+        "type": "image",
+        "color": "#e4d3c5",
+        "fit": "cover",
+        "opacity": 1,
+        "metadata": {
+          "src": "/album-templates/modern/frame (10).png",
+          "overlaySrc": "/album-templates/overlays/frame (10)_cutout.png"
+        }
+      },
+      "elements": [],
+      "photoSlots": [
+        {
+          "id": "slot-1791966258600-1",
+          "x": 6.58,
+          "y": 6.1,
+          "width": 43.52,
+          "height": 41,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791965706930_21kxtr"
+        },
+        {
+          "id": "slot-1791966258600-2",
+          "x": 8.58,
+          "y": 43.11,
+          "width": 40.97,
+          "height": 36.42,
+          "rotation": 0,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791965706913_dfgfem"
+        },
+        {
+          "id": "slot-1791966258600-3",
+          "x": 51.36,
+          "y": 20.78,
+          "width": 39.01,
+          "height": 35.52,
+          "rotation": 8.4,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791965706862_xfn0tc"
+        },
+        {
+          "id": "slot-1791966258600-4",
+          "x": 47.23,
+          "y": 54.03,
+          "width": 36.86,
+          "height": 46.59,
+          "rotation": 7.6,
+          "shape": "rect",
+          "borderRadius": 0,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "zoom": 1,
+          "assetId": "photo_1791963881011_xwvpqs"
+        }
+      ],
+      "textElements": [],
+      "metadata": {
+        "folioLabel": "Folio 10"
+      },
+      "templateId": "frame-template-10-filmstrip-wedding-rings"
+    }
+  ],
+  "backCover": {
+    "id": "cover-back-album-1791957081974-on4k6xu",
+    "type": "back",
+    "background": {
+      "type": "solid",
+      "color": "#0f172a",
+      "opacity": 1
+    },
+    "elements": [],
+    "photoSlots": [],
+    "textElements": [
+      {
+        "id": "txt-1791968106850",
+        "text": "THE END",
+        "x": 11.28,
+        "y": 47.69,
+        "width": 76.59,
+        "height": 13.52,
+        "rotation": 0,
+        "fontFamily": "Playfair Display",
+        "fontSize": 28,
+        "fontWeight": 700,
+        "color": "#e9e21c",
+        "align": "center",
+        "lineHeight": 1.4,
+        "letterSpacing": 0.5,
+        "metadata": {
+          "manualOverride": true
+        }
+      }
+    ],
+    "metadata": {
+      "foilLogo": true
+    }
+  },
+  "assets": [
+    {
+      "id": "photo_1791963880195_p2qtz5",
+      "type": "photo",
+      "name": "_PRS2244.JPG",
+      "src": "/album-assets/photos/photo_1791963880195_p2qtz5.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2244.JPG",
+        "storedFilename": "photo_1791963880195_p2qtz5.jpg",
+        "fileSize": 11816546,
+        "uploadedAt": "2026-10-14T07:44:40.208Z"
+      }
+    },
+    {
+      "id": "photo_1791963880251_jwvic7",
+      "type": "photo",
+      "name": "_PRS2255.JPG",
+      "src": "/album-assets/photos/photo_1791963880251_jwvic7.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2255.JPG",
+        "storedFilename": "photo_1791963880251_jwvic7.jpg",
+        "fileSize": 8382066,
+        "uploadedAt": "2026-10-14T07:44:40.310Z"
+      }
+    },
+    {
+      "id": "photo_1791963880372_c1eh73",
+      "type": "photo",
+      "name": "_PRS2271.JPG",
+      "src": "/album-assets/photos/photo_1791963880372_c1eh73.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2271.JPG",
+        "storedFilename": "photo_1791963880372_c1eh73.jpg",
+        "fileSize": 11919581,
+        "uploadedAt": "2026-10-14T07:44:40.390Z"
+      }
+    },
+    {
+      "id": "photo_1791963880411_hp0yf5",
+      "type": "photo",
+      "name": "_PRS2284.JPG",
+      "src": "/album-assets/photos/photo_1791963880411_hp0yf5.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2284.JPG",
+        "storedFilename": "photo_1791963880411_hp0yf5.jpg",
+        "fileSize": 8759674,
+        "uploadedAt": "2026-10-14T07:44:40.429Z"
+      }
+    },
+    {
+      "id": "photo_1791963880441_ui00bw",
+      "type": "photo",
+      "name": "_PRS2309.JPG",
+      "src": "/album-assets/photos/photo_1791963880441_ui00bw.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2309.JPG",
+        "storedFilename": "photo_1791963880441_ui00bw.jpg",
+        "fileSize": 11482517,
+        "uploadedAt": "2026-10-14T07:44:40.456Z"
+      }
+    },
+    {
+      "id": "photo_1791963880507_x22a8a",
+      "type": "photo",
+      "name": "_PRS2326.JPG",
+      "src": "/album-assets/photos/photo_1791963880507_x22a8a.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2326.JPG",
+        "storedFilename": "photo_1791963880507_x22a8a.jpg",
+        "fileSize": 8708513,
+        "uploadedAt": "2026-10-14T07:44:40.522Z"
+      }
+    },
+    {
+      "id": "photo_1791963880543_7buglf",
+      "type": "photo",
+      "name": "_PRS2347.JPG",
+      "src": "/album-assets/photos/photo_1791963880543_7buglf.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2347.JPG",
+        "storedFilename": "photo_1791963880543_7buglf.jpg",
+        "fileSize": 8595399,
+        "uploadedAt": "2026-10-14T07:44:40.551Z"
+      }
+    },
+    {
+      "id": "photo_1791963880555_i3h89y",
+      "type": "photo",
+      "name": "_PRS2358 (1).JPG",
+      "src": "/album-assets/photos/photo_1791963880555_i3h89y.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2358 (1).JPG",
+        "storedFilename": "photo_1791963880555_i3h89y.jpg",
+        "fileSize": 8290092,
+        "uploadedAt": "2026-10-14T07:44:40.563Z"
+      }
+    },
+    {
+      "id": "photo_1791963880579_wjr18z",
+      "type": "photo",
+      "name": "_PRS2367.JPG",
+      "src": "/album-assets/photos/photo_1791963880579_wjr18z.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2367.JPG",
+        "storedFilename": "photo_1791963880579_wjr18z.jpg",
+        "fileSize": 4561880,
+        "uploadedAt": "2026-10-14T07:44:40.583Z"
+      }
+    },
+    {
+      "id": "photo_1791963880618_zbtl9t",
+      "type": "photo",
+      "name": "_PRS2409.JPG",
+      "src": "/album-assets/photos/photo_1791963880618_zbtl9t.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2409.JPG",
+        "storedFilename": "photo_1791963880618_zbtl9t.jpg",
+        "fileSize": 7930677,
+        "uploadedAt": "2026-10-14T07:44:40.652Z"
+      }
+    },
+    {
+      "id": "photo_1791963880660_xfobnq",
+      "type": "photo",
+      "name": "_PRS2411.JPG",
+      "src": "/album-assets/photos/photo_1791963880660_xfobnq.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2411.JPG",
+        "storedFilename": "photo_1791963880660_xfobnq.jpg",
+        "fileSize": 10756808,
+        "uploadedAt": "2026-10-14T07:44:40.670Z"
+      }
+    },
+    {
+      "id": "photo_1791963880675_bt6kr7",
+      "type": "photo",
+      "name": "_PRS2413.JPG",
+      "src": "/album-assets/photos/photo_1791963880675_bt6kr7.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2413.JPG",
+        "storedFilename": "photo_1791963880675_bt6kr7.jpg",
+        "fileSize": 7677173,
+        "uploadedAt": "2026-10-14T07:44:40.684Z"
+      }
+    },
+    {
+      "id": "photo_1791963880688_9va8bm",
+      "type": "photo",
+      "name": "_PRS2663 (1).JPG",
+      "src": "/album-assets/photos/photo_1791963880688_9va8bm.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2663 (1).JPG",
+        "storedFilename": "photo_1791963880688_9va8bm.jpg",
+        "fileSize": 7651602,
+        "uploadedAt": "2026-10-14T07:44:40.696Z"
+      }
+    },
+    {
+      "id": "photo_1791963880733_gbmjt6",
+      "type": "photo",
+      "name": "_PRS3504.JPG",
+      "src": "/album-assets/photos/photo_1791963880733_gbmjt6.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS3504.JPG",
+        "storedFilename": "photo_1791963880733_gbmjt6.jpg",
+        "fileSize": 7739328,
+        "uploadedAt": "2026-10-14T07:44:40.741Z"
+      }
+    },
+    {
+      "id": "photo_1791963880801_70cp5a",
+      "type": "photo",
+      "name": "_PRS3558.JPG",
+      "src": "/album-assets/photos/photo_1791963880801_70cp5a.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS3558.JPG",
+        "storedFilename": "photo_1791963880801_70cp5a.jpg",
+        "fileSize": 8428459,
+        "uploadedAt": "2026-10-14T07:44:40.818Z"
+      }
+    },
+    {
+      "id": "photo_1791963880864_fefl8a",
+      "type": "photo",
+      "name": "_PRS3625.JPG",
+      "src": "/album-assets/photos/photo_1791963880864_fefl8a.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS3625.JPG",
+        "storedFilename": "photo_1791963880864_fefl8a.jpg",
+        "fileSize": 8900280,
+        "uploadedAt": "2026-10-14T07:44:40.873Z"
+      }
+    },
+    {
+      "id": "photo_1791963880911_v3aibu",
+      "type": "photo",
+      "name": "_PRS2864.JPG",
+      "src": "/album-assets/photos/photo_1791963880911_v3aibu.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2864.JPG",
+        "storedFilename": "photo_1791963880911_v3aibu.jpg",
+        "fileSize": 9969083,
+        "uploadedAt": "2026-10-14T07:44:40.930Z"
+      }
+    },
+    {
+      "id": "photo_1791963880938_klsu27",
+      "type": "photo",
+      "name": "_PRS2178.JPG",
+      "src": "/album-assets/photos/photo_1791963880938_klsu27.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2178.JPG",
+        "storedFilename": "photo_1791963880938_klsu27.jpg",
+        "fileSize": 8737669,
+        "uploadedAt": "2026-10-14T07:44:40.949Z"
+      }
+    },
+    {
+      "id": "photo_1791963880957_ak5t3g",
+      "type": "photo",
+      "name": "_PRS2174 (1).JPG",
+      "src": "/album-assets/photos/photo_1791963880957_ak5t3g.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2174 (1).JPG",
+        "storedFilename": "photo_1791963880957_ak5t3g.jpg",
+        "fileSize": 9501692,
+        "uploadedAt": "2026-10-14T07:44:40.975Z"
+      }
+    },
+    {
+      "id": "photo_1791963881011_xwvpqs",
+      "type": "photo",
+      "name": "_PRS2148 (1).JPG",
+      "src": "/album-assets/photos/photo_1791963881011_xwvpqs.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2148 (1).JPG",
+        "storedFilename": "photo_1791963881011_xwvpqs.jpg",
+        "fileSize": 8031915,
+        "uploadedAt": "2026-10-14T07:44:41.032Z"
+      }
+    },
+    {
+      "id": "photo_1791965706862_xfn0tc",
+      "type": "photo",
+      "name": "_PRS2135 (1).JPG",
+      "src": "/album-assets/photos/photo_1791965706862_xfn0tc.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2135 (1).JPG",
+        "storedFilename": "photo_1791965706862_xfn0tc.jpg",
+        "fileSize": 8951716,
+        "uploadedAt": "2026-10-14T08:15:06.873Z"
+      }
+    },
+    {
+      "id": "photo_1791965706913_dfgfem",
+      "type": "photo",
+      "name": "_PRS2090.JPG",
+      "src": "/album-assets/photos/photo_1791965706913_dfgfem.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2090.JPG",
+        "storedFilename": "photo_1791965706913_dfgfem.jpg",
+        "fileSize": 9790476,
+        "uploadedAt": "2026-10-14T08:15:06.924Z"
+      }
+    },
+    {
+      "id": "photo_1791965706930_21kxtr",
+      "type": "photo",
+      "name": "_PRS2088.JPG",
+      "src": "/album-assets/photos/photo_1791965706930_21kxtr.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2088.JPG",
+        "storedFilename": "photo_1791965706930_21kxtr.jpg",
+        "fileSize": 10103471,
+        "uploadedAt": "2026-10-14T08:15:06.944Z"
+      }
+    },
+    {
+      "id": "photo_1791965707043_1l1tnn",
+      "type": "photo",
+      "name": "_PRS2374.JPG",
+      "src": "/album-assets/photos/photo_1791965707043_1l1tnn.jpg",
+      "width": 1600,
+      "height": 1200,
+      "aspectRatio": 1.33,
+      "mimeType": "image/jpeg",
+      "category": "photo",
+      "metadata": {
+        "originalFilename": "_PRS2374.JPG",
+        "storedFilename": "photo_1791965707043_1l1tnn.jpg",
+        "fileSize": 5676813,
+        "uploadedAt": "2026-10-14T08:15:07.051Z"
+      }
+    }
+  ],
+  "settings": {
+    "autoSave": true,
+    "pageTransitionSound": true,
+    "showPageNumbers": true,
+    "defaultTheme": "modern-luxury",
+    "allowZoom": true
+  },
+  "metadata": {
+    "generator": "TNWebz Album Studio v1"
+  }
+}

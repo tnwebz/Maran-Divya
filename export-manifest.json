@@ -1,0 +1,16 @@
+{
+  "exportId": "exp_1791968543300_ymztf",
+  "createdAt": "2026-10-14T09:02:23.512Z",
+  "projectId": "album-1791957081974-on4k6xu",
+  "projectName": "Maran & Divya",
+  "projectSchemaVersion": 1,
+  "runtimeVersion": "1.0.0",
+  "pageCount": 10,
+  "assetCount": 24,
+  "usedPhotosCount": 24,
+  "totalSizeBytes": 212363430,
+  "outputDir": "exports/maran-and-divya-album",
+  "clientName": "Maran & Divya",
+  "slug": "maran-and-divya",
+  "deploymentTarget": "nextjs-vercel-cloudflare"
+}
