@@ -199,9 +199,6 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
       setCurrentPage(pageIdx);
       onCurrentPageChangeRef.current?.(pageIdx);
 
-      const isCoverFlip = pageIdx === 0 || pageIdx >= lastPageIndex;
-      albumAudio.playPageFlipSound(isCoverFlip ? 'cover' : 'turn');
-
       const progress =
         lastPageIndex > 0 ? Math.min(1, Math.max(0, pageIdx / lastPageIndex)) : 0;
       setStackLeftWidth(Math.max(2, Math.round(progress * 16)));
