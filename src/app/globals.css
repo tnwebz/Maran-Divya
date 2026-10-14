@@ -1,23 +1,163 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0d0b09;
-  --foreground: #fcfaf2;
+@layer base {
+  :root {
+    --font-serif-luxury: var(--font-playfair), "Playfair Display", Georgia, serif;
+    --font-editorial: var(--font-eb-garamond), "EB Garamond", Georgia, serif;
+    --font-script: var(--font-pinyon), cursive;
+    --font-sans: var(--font-montserrat), "Montserrat", sans-serif;
+
+    --album-bg: #0c0a09;
+    --album-maroon: #3f1118;
+    --album-maroon-deep: #2a0b10;
+    --album-paper: #fbf8f2;
+    --album-paper-warm: #f5efe6;
+    --album-gold: #d4af37;
+    --album-gold-light: #e6ca65;
+  }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  overflow: hidden;
-  user-select: none;
-}
-
-/* StPageFlip physical page shadows and styling */
+/* Warm ivory archival paper - theme responsive */
 .paper-sheet {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background-color: var(--album-paper, #fbf8f2);
+  background-image:
+    radial-gradient(#d6cdb7 0.7px, transparent 0.7px),
+    radial-gradient(#e0d7c3 0.7px, var(--album-paper, #fbf8f2) 0.7px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+  box-shadow: inset 0 0 36px rgba(184, 166, 137, 0.1);
+  color: var(--album-text, #2b2824);
 }
 
+/* Ensure inner layout wrappers do not mask the underlying paper background & motifs */
+.paper-sheet .paper-sheet {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Gold foil stamping */
+.gold-foil-text {
+  background: linear-gradient(
+    135deg,
+    #b8872a 0%,
+    #d4af37 28%,
+    #e6ca65 50%,
+    #b8872a 75%,
+    #d4af37 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.55));
+}
+
+.gold-foil-border {
+  border-image: linear-gradient(
+    135deg,
+    #b8872a 0%,
+    #d4af37 30%,
+    #e6ca65 50%,
+    #b8872a 70%,
+    #d4af37 100%
+  ) 1;
+}
+
+/* Debossed maroon leather cover */
 .leather-maroon-cover {
-  background: linear-gradient(135deg, #3d0d17 0%, #4a1521 50%, #29080e 100%);
+  background:
+    radial-gradient(circle at 50% 32%, #52141e 0%, #3f1118 45%, #2a0b10 85%, #1a070c 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.035) 0px,
+      rgba(0, 0, 0, 0.035) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  box-shadow:
+    0 28px 60px -12px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(212, 175, 55, 0.12),
+    inset 0 0 70px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.06);
+}
+
+/* Center gutter depth */
+.spine-gutter-left {
+  box-shadow: inset -20px 0 28px -12px rgba(45, 30, 15, 0.32);
+}
+
+.spine-gutter-right {
+  box-shadow: inset 20px 0 28px -12px rgba(45, 30, 15, 0.32);
+}
+
+/* Stacked page edges */
+.page-edge-left {
+  background: repeating-linear-gradient(
+    to right,
+    #e8dfce 0px,
+    #e8dfce 1px,
+    #d1c5b0 1px,
+    #d1c5b0 2px
+  );
+  box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.page-edge-right {
+  background: repeating-linear-gradient(
+    to left,
+    #e8dfce 0px,
+    #e8dfce 1px,
+    #d1c5b0 1px,
+    #d1c5b0 2px
+  );
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Typography */
+.font-serif-luxury {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+}
+
+.font-editorial {
+  font-family: var(--font-eb-garamond), "EB Garamond", Georgia, serif;
+}
+
+.font-script {
+  font-family: var(--font-pinyon), cursive;
+}
+
+.font-sans-clean {
+  font-family: var(--font-montserrat), "Montserrat", sans-serif;
+}
+
+/* page-flip hard/soft page base */
+.page-sheet-item {
+  background-color: #fbf8f2;
+}
+
+.page-sheet-item[data-density="hard"] {
+  background-color: #2a0b10;
+}
+
+/* Ensure StPageFlip canvas/items stay above the shell */
+.stf__parent,
+.stf__wrapper,
+.stf__block {
+  margin: 0 auto;
+}
+
+.stf__item {
+  overflow: hidden !important;
+}
+
+.stf__item.--hard {
+  background-color: #2a0b10 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

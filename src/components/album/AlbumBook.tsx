@@ -98,6 +98,11 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
   const isFrontClosed = currentPage === 0;
   const isBackClosed = currentPage >= lastPageIndex;
 
+  const onCurrentPageChangeRef = useRef(onCurrentPageChange);
+  useEffect(() => {
+    onCurrentPageChangeRef.current = onCurrentPageChange;
+  }, [onCurrentPageChange]);
+
   const initBook = useCallback(() => {
     if (!containerRef.current) return;
 
@@ -143,7 +148,7 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
     pageFlip.on('flip', (e: FlipEvent) => {
       const pageIdx = typeof e.data === 'number' ? e.data : 0;
       setCurrentPage(pageIdx);
-      onCurrentPageChange?.(pageIdx);
+      onCurrentPageChangeRef.current?.(pageIdx);
 
       const isCoverFlip = pageIdx === 0 || pageIdx >= lastPageIndex;
       albumAudio.playPageFlipSound(isCoverFlip ? 'cover' : 'turn');
@@ -160,7 +165,7 @@ export const AlbumBook: React.FC<AlbumBookProps> = ({
 
     pageFlipInstance.current = pageFlip;
     setIsLoaded(true);
-  }, [contentPageCount, onCurrentPageChange, lastPageIndex]);
+  }, [contentPageCount, lastPageIndex]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
